@@ -1,0 +1,14 @@
+<body>
+    <form id = "Magic8ball">
+        <input id = "question" placeholder="enter the question">
+        <button type="submit">Ask</button>
+        <p id="answer">If you asked the answer would be here</p>
+        <script>
+            const aChoices = ["yes","no","maybe","most definitely","I think so"];
+            document.getElementById("Magic8ball").addEventListener("submit",(evt)=>{
+                evt.preventDefault();
+                const nChoice = Math.floor(Math.random()* aChoices.length);
+                document.getElementById("answer").innerHTML = aChoices[nChoice];
+            });            
+            </script>
+    </body>
